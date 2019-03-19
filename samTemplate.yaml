@@ -13,10 +13,10 @@ Resources:
       Timeout: 30
       # Role: 'arn:aws:iam::077497884784:role/cloudformationServiceRole'
       Events:
-        getAZsAPI:
+        workoutAPI:
           Type: Api
           Properties:
-            Path: /getazs
+            Path: /getworkouts
             Method: get
       Environment:
         Variables:
