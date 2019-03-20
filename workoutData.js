@@ -13,6 +13,14 @@ async function getWorkOutList() {
 // Noticeable change in function parameters, there is no callback
 exports.handler = async (event) => {
     let workList = await getWorkOutList();
-    let responseData = JSON.stringify(workList);
-    return responseData;
+    var response = {
+        "statusCode": 200,
+        "headers": {
+            "my_header": "my_value"
+        },
+        "body": JSON.stringify(workList),
+        "isBase64Encoded": false
+    };
+
+    return response;
 }
