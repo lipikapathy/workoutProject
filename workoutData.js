@@ -13,5 +13,6 @@ async function getWorkOutList() {
 // Noticeable change in function parameters, there is no callback
 exports.handler = async (event) => {
     let workList = await getWorkOutList();
-    return workList;
+    let responseData = JSON.stringify(workList);
+    return responseData;
 }
